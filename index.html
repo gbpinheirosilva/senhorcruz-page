@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajude o Senhor Cruz - Campanha de Arrecadação | Jardim América, Pendotiba</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Ajude o Senhor Cruz, vendedor de algodão doce e picolés de Jardim América, Pendotiba, que sofreu um AVC. Sua contribuição fará diferença!">
+    <meta name="keywords" content="ajuda, arrecadação, Senhor Cruz, Jardim América, Pendotiba, algodão doce, solidariedade">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ajude o Senhor Cruz - Campanha de Arrecadação">
+    <meta property="og:description" content="Senhor Cruz, o querido vendedor de algodão doce e picolés de Jardim América, Pendotiba, precisa da nossa ajuda após sofrer um AVC.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .fixed-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('/css/images/fundo.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+        
+        /* Ensure content stays above the fixed background */
+        body {
+            position: relative;
+            z-index: 1;
+            background: transparent;
+        }
+        
+        .pix-key {
+            background-color: #f3f4f6;
+            border: 1px dashed #d1d5db;
+            padding: 12px;
+            border-radius: 6px;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .pix-key:hover {
+            background-color: #e5e7eb;
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <div class="fixed-bg"></div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed w-full z-10 h-20 flex items-center">
+        <nav class="container mx-auto px-6">
+            <div class="flex justify-between items-center h-full">
+                <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="cursor-pointer">
+                    <h1 class="text-2xl font-bold text-blue-600">Ajude o Senhor Cruz</h1>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#sobre" onclick="scrollToElement('sobre'); return false;" class="text-gray-600 hover:text-gray-900">Sobre</a>
+                    <a href="#como-ajudar" onclick="scrollToElement('como-ajudar'); return false;" class="text-gray-600 hover:text-gray-900">Como Ajudar</a>
+                    <a href="#contato" onclick="scrollToElement('contato'); return false;" class="text-gray-600 hover:text-gray-900">Contato</a>
+                </div>
+                <!-- Mobile menu button -->
+                <button class="md:hidden flex items-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center text-white" style="min-height: 80vh; padding-top: 80px;">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-6xl font-bold mb-4">Ajude o Senhor Cruz</h2>
+            <p class="text-xl md:text-2xl mb-8">O nosso querido vendedor de algodão doce e picolés de Jardim América, Pendotiba</p>
+            <a href="#como-ajudar" onclick="scrollToElement('como-ajudar'); return false;" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300">
+                Quero Ajudar
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="bg-white py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 flex justify-center">
+                    <img src="css/images/perfil.jpg" alt="Senhor Cruz com seu carrinho de algodão doce" 
+                        class="rounded-lg shadow-lg object-cover h-96 w-auto" 
+                        width="400" height="500">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h3 class="text-3xl font-bold mb-6">Quem é o Senhor Cruz</h3>
+                    <p class="text-gray-600 mb-6">
+                        Por muitos anos, o Senhor Cruz tem trazido alegria para as crianças e famílias de Jardim América, em Pendotiba, com seu delicioso algodão doce e picolés. Com seu sorriso gentil e carisma, ele se tornou uma figura querida e essencial nos fins de semana da nossa comunidade.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Recentemente, o Senhor Cruz sofreu um Acidente Vascular Cerebral (AVC) e agora enfrenta desafios significativos de saúde. Ele precisa de tratamento médico contínuo e está impossibilitado de trabalhar e sustentar sua família.
+                    </p>
+                    <p class="text-gray-600 font-semibold">
+                        É hora de retribuirmos a doçura e bondade que ele sempre ofereceu à nossa comunidade.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Help Section -->
+    <section id="como-ajudar" class="bg-gray-50 py-20">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center mb-12">Como Ajudar</h3>
+            
+            <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
+                <h4 class="text-2xl font-bold mb-4 text-blue-600">Transferência via PIX</h4>
+                <p class="mb-6">
+                    Todas as doações serão recebidas por Gabriel Brígido, morador do Ubá Pendotiba, que irá repassar integralmente o valor desta conta dedicada ao senhor Cruz. O valor será utilizado integralmente para custear tratamentos médicos, medicamentos e despesas familiares enquanto ele se recupera.
+                </p>
+                
+                <div class="mb-8">
+                    <p class="font-medium mb-2">Chave PIX (Aleatória):</p>
+                    <div class="pix-key mb-2" onclick="copyPixKey()" id="pix-container">
+                        <span id="pix-key">95aa5f02-2f80-4d5f-ac2b-fbeb9cde0d3d</span>
+                        <span class="absolute right-2 top-3 text-blue-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                        </span>
+                        <span class="hidden absolute right-2 top-3 text-green-600" id="copied-indicator">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </span>
+                    </div>
+                    <p class="text-sm text-gray-500">Clique na chave acima para copiar</p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center justify-center">
+                    <div class="md:w-1/2 flex justify-center mb-6 md:mb-0">
+                        <div class="bg-white p-4 rounded-lg shadow-md inline-block">
+                            <img src="css/images/qrcode.jpg" alt="QR Code PIX" class="w-48 h-48">
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 md:pl-8">
+                        <h5 class="font-bold text-lg mb-2">Como utilizar:</h5>
+                        <ol class="list-decimal pl-5 space-y-2 text-gray-600">
+                            <li>Abra o aplicativo do seu banco</li>
+                            <li>Acesse a área de PIX</li>
+                            <li>Escolha a opção "Pagar com PIX"</li>
+                            <li>Escaneie o QR code ou cole a chave copiada</li>
+                            <li>Digite o valor que deseja doar</li>
+                            <li>Confirme a transação</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <p class="text-lg font-medium mb-4">Qualquer contribuição é valiosa!</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <button onclick="setAmount('10')" class="bg-gray-100 hover:bg-gray-200 px-6 py-2 rounded-full">R$ 10</button>
+                        <button onclick="setAmount('20')" class="bg-gray-100 hover:bg-gray-200 px-6 py-2 rounded-full">R$ 20</button>
+                        <button onclick="setAmount('50')" class="bg-gray-100 hover:bg-gray-200 px-6 py-2 rounded-full">R$ 50</button>
+                        <button onclick="setAmount('100')" class="bg-gray-100 hover:bg-gray-200 px-6 py-2 rounded-full">R$ 100</button>
+                        <button onclick="setAmount('custom')" class="bg-gray-100 hover:bg-gray-200 px-6 py-2 rounded-full">Outro valor</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="bg-white py-20">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h3 class="text-3xl font-bold text-center mb-12">Contato</h3>
+            
+            <div class="bg-gray-50 rounded-lg shadow-lg p-8">
+                <p class="text-gray-600 mb-6 text-center">
+                    Para mais informações ou para contribuir de outras formas, entre em contato com Maria da Silva, filha do Senhor Cruz:
+                </p>
+                
+                <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-12">
+                    <div class="flex items-center">
+                        <i class="fab fa-whatsapp text-green-500 text-xl mr-2"></i>
+                        <a href="https://wa.me/5521900000000" target="_blank" class="hover:text-green-500 transition duration-300">
+                            <span>(21) 90000-0000</span>
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <svg class="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>maria.silva@email.com</span>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <h4 class="text-xl font-bold mb-4 text-center">Compartilhe esta campanha</h4>
+                    <div class="flex justify-center space-x-6">
+                        <a href="#" class="text-blue-600 hover:text-blue-800">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.77,7.46H14.5v-1.9c0-.9.6-1.1,1-1.1h3V.5h-4.33C10.24.5,9.5,3.44,9.5,5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4Z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-blue-400 hover:text-blue-600">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-green-600 hover:text-green-800">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-green-500 hover:text-green-700">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Update Section -->
+    <section class="bg-gray-50 py-20">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h3 class="text-3xl font-bold text-center mb-6">Atualizações</h3>
+            <p class="text-center text-gray-600 mb-12">
+                Acompanhe aqui o progresso da campanha e a recuperação do Senhor Cruz
+            </p>
+            
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="flex justify-between items-center mb-4">
+                        <h4 class="font-bold text-xl">Início da campanha</h4>
+                        <span class="text-gray-500">28 de fevereiro, 2025</span>
+                    </div>
+                    <p class="text-gray-600">
+                        Hoje iniciamos nossa campanha para ajudar o Senhor Cruz em sua recuperação. Contamos com o apoio de todos que já receberam um pouco da alegria e doçura que ele traz para nossa comunidade.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thank You Section -->
+    <section class="py-20 bg-blue-50">
+        <div class="container mx-auto px-6 text-center max-w-3xl">
+            <h3 class="text-3xl font-bold mb-6">Gratidão</h3>
+            <p class="text-gray-600 mb-8">
+                Agradecemos imensamente por qualquer contribuição que você possa fazer. Juntos, podemos garantir que o Senhor Cruz receba o tratamento necessário e possa voltar a trazer doçura para nossas vidas quando estiver recuperado.
+            </p>
+            <a href="#como-ajudar" onclick="scrollToElement('como-ajudar'); return false;" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg inline-block text-lg transition duration-300">
+                Doar Agora
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <p class="mb-4">Campanha de arrecadação para o Senhor Cruz</p>
+                <p class="text-sm text-gray-400">
+                    &copy; 2025 - Desenvolvido com carinho pela comunidade de Jardim América, Pendotiba
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="md:hidden fixed inset-0 bg-gray-800 bg-opacity-95 z-50 hidden" id="mobile-menu">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#sobre" onclick="scrollToElement('sobre'); toggleMobileMenu(); return false;" class="text-white text-xl">Sobre</a>
+            <a href="#como-ajudar" onclick="scrollToElement('como-ajudar'); toggleMobileMenu(); return false;" class="text-white text-xl">Como Ajudar</a>
+            <a href="#contato" onclick="scrollToElement('contato'); toggleMobileMenu(); return false;" class="text-white text-xl">Contato</a>
+            <button onclick="toggleMobileMenu()" class="mt-8 text-white border border-white rounded-full p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Function to handle smooth scrolling to elements
+        function scrollToElement(elementId) {
+            const element = document.getElementById(elementId);
+            if (element) {
+                // Calculate position to account for fixed header
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - headerHeight;
+                
+                // Scroll to the adjusted position
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+        
+        document.querySelector('button').addEventListener('click', toggleMobileMenu);
+        
+        // Copy PIX key functionality
+        function copyPixKey() {
+            const pixKey = document.getElementById('pix-key').innerText;
+            navigator.clipboard.writeText(pixKey).then(() => {
+                // Show copied indicator
+                document.getElementById('copied-indicator').classList.remove('hidden');
+                setTimeout(() => {
+                    document.getElementById('copied-indicator').classList.add('hidden');
+                }, 2000);
+            });
+        }
+        
+        // Set donation amount
+        function setAmount(amount) {
+            if (amount === 'custom') {
+                const customAmount = prompt('Digite o valor que deseja doar:', '');
+                if (customAmount) {
+                    alert(`Obrigado! Por favor, transfira R$ ${customAmount} usando a chave PIX.`);
+                }
+            } else {
+                alert(`Obrigado! Por favor, transfira R$ ${amount} usando a chave PIX.`);
+            }
+        }
+    </script>
+
+</body>
+</html>

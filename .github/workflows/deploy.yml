@@ -1,0 +1,43 @@
+name: Deploy to Subdomain on Hostgator
+
+on:
+  push:
+    branches:
+      - main  # or whichever branch you want to deploy from
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      # Optional: Add build steps here if you need to compile, minify or process files
+      # - name: Install dependencies
+      #   run: npm ci
+      #
+      # - name: Build project
+      #   run: npm run build
+        
+      - name: Deploy to Hostgator Subdomain via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          local-dir: ./  # Adjust if you have a build directory
+          server-dir: /public_html/senhorcruz/  # Deploy to the subdomain directory
+          dangerous-clean-slate: false  # Set to true if you want to delete all files on the server first
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            .github/**
+            README.md
