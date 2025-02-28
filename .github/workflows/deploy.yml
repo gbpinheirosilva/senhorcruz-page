@@ -33,7 +33,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           local-dir: ./  # Adjust if you have a build directory
-          server-dir: /public_html/cruz/  # Adjust based on your actual directory structure
+          server-dir: /public_html/  # Adjust based on your actual directory structure
           dangerous-clean-slate: false  # Set to true if you want to delete all files on the server first
           exclude: |
             **/.git*
